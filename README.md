@@ -4,17 +4,21 @@ Latest images on [DockerHub](https://hub.docker.com/):
 
 	nadanai263/nllab-python:003
 	nadanai263/nllab-jupyter:005
-	nadanai263/nllab-julia:004
+	nadanai263/nllab-julia:005
 
-The numeric tags will increase as the containers are updated, so please check them on [DockerHub](https://hub.docker.com/). To use these, clone the repository, open up a terminal and navigate to the directory containing the repository. Then (making sure you have a working [Docker](https://www.docker.com) installation in place), run (on Mac, Linux)
+The numeric tags will increase as the containers are updated, so please check them on [DockerHub](https://hub.docker.com/). 
+
+### Running Linux in a Docker container
+
+As an example to start an interactive Linux shell which contains a Python environment, first navigate to the directory containing your work. Then (making sure you have a working [Docker](https://www.docker.com) installation in place), run (on Mac, Linux)
 
 	docker run -it --rm -v "$PWD":/app nadanai263/nllab-python:003 /bin/bash
 
 On Windows, replace `"$PWD"` with `"%CD%"` (for command prompt) or `${pwd}` (for powershell).
 
-This will pull and launch a Docker container, and start up a Linux shell. Your current working folder will be mounted to `/app`. Run the scripts as required.
+This will pull and launch a Docker container, and start up a Linux shell. Your current working folder will be mounted to `/app`. Run your scripts as required.
 
-### Running Jupyter notebook in Docker container
+### Running Jupyter notebook in a Docker container
 
 You can directly start a Jupyter notebook in your current directory, using
 
@@ -22,10 +26,11 @@ You can directly start a Jupyter notebook in your current directory, using
 
 Again, on Windows replace `"$PWD"` with `"%CD%"` (for command prompt) or `${pwd}` (for powershell).
 
+---
 
 ### Useful Docker commands
 
-#### Building and pushing to registry
+#### 1. Building and pushing to registry
 
 Building from a Dockerfile: navigate to the directory containing the file, which must be named `Dockerfile`, and run 
 
@@ -40,7 +45,7 @@ where `repository:tag` is the new repository name and version, e.g. `newrepo:001
 
 	docker push username/repository:tag
 
-#### Running
+#### 2. Running
 
 An example of a run command in more detail: 
 
@@ -53,7 +58,7 @@ This command creates a Docker container from the online image, and launches it w
 * `-v "$PWD":/home/jovyan/` starts the container in your current directory
 * `username/repository:tag` is the image:tag, corresponding to a specific image on DockerHub
 
-#### More examples of run commands
+#### 3. More examples of run commands
 
 Mac/Linux versions given; as always on Windows, replace `"$PWD"` with `"%CD%"` (for command prompt) or `${pwd}` (for powershell).
 
@@ -70,7 +75,7 @@ To run a single python script called `script.py` located in your current directo
 	docker run --rm -v "$PWD":/app nadanai263/nllab-python:003 python app/script.py
 
 
-#### Maintenance and cleaning
+#### 4. Maintenance and cleaning
 
 To list all your local containers and images:
 
