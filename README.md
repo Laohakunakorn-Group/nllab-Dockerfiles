@@ -3,7 +3,7 @@
 Latest images on [DockerHub](https://hub.docker.com/):
 
 	nadanai263/nllab-python:003
-	nadanai263/nllab-jupyter:005
+	nadanai263/nllab-jupyter:006
 	nadanai263/nllab-julia:005
 
 The numeric tags will increase as the containers are updated, so please check them on [DockerHub](https://hub.docker.com/). 
@@ -22,7 +22,7 @@ This will pull and launch a Docker container, and start up a Linux shell. Your c
 
 You can directly start a Jupyter notebook in your current directory, using
 
-	docker run -p 8888:8888 --rm -it -v "$PWD":/home/jovyan nadanai263/nllab-jupyter:005
+	docker run -p 8888:8888 --rm -it -v "$PWD":/home/jovyan nadanai263/nllab-jupyter:006
 
 Again, on Windows replace `"$PWD"` with `"%CD%"` (for command prompt) or `${pwd}` (for powershell).
 
