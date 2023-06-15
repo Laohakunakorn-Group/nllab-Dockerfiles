@@ -3,7 +3,7 @@
 Latest images on [DockerHub](https://hub.docker.com/):
 
 	nadanai263/nllab-python:003 - Python 3.8
-	nadanai263/nllab-jupyter:007 - Python 3.11, Julia 1.5
+	nadanai263/nllab-jupyter:007 - Python 3.11.4, Julia 1.5.3
 	nadanai263/nllab-julia:005 - Julia 1.5
 
 The numeric tags will increase as the containers are updated, so please check them on [DockerHub](https://hub.docker.com/). 
