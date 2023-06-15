@@ -4,7 +4,8 @@
 # jupyter/scipy-notebook, and jupyter/datascience-notebook
 # This version uses Python 3.11.4.
 # tesbml no longer supported.
-# Tellurium does not work on MacOS builds as requires amd64 wheels.  
+# Tellurium does not work on MacOS builds as requires amd64 wheels.
+# So build this file using a Linux system.
 
 # Start scipy-notebook
 ARG OWNER=jupyter
